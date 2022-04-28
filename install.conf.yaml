@@ -3,11 +3,14 @@
       create: true
       relink: true
 
+- shell:
+  - command: sh/sudo.sh
+    description: Install passwordless sudo.
+    stderr: true
+
 - clean: ['~']
 
 - link:
     ~/.config/atuin/config.toml: .config/atuin/config.toml
 
 # - create:
-
-# - shell:
