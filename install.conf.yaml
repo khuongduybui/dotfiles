@@ -4,14 +4,13 @@
       relink: true
 
 - shell:
-  - command: sh/sudo.sh
-    description: Install passwordless sudo.
-    stderr: true
-  - command: sh/brew.sh
-    description: Install homebrew.
-    stderr: true
+    - command: sh/sudo.sh
+      description: Install passwordless sudo.
+      stderr: true
+    - command: sh/brew.sh
+      description: Install homebrew.
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.config/atuin/config.toml: .config/atuin/config.toml
@@ -19,21 +18,21 @@
     ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
     ~/.config/fish/conf.d/functions: .config/fish/conf.d/functions
 
+    ~/.editorconfig: .editorconfig
+
 - brew:
-  - fish
-  - atuin
-  - starship
-  - direnv
-  - zoxide
+    - fish
+    - atuin
+    - starship
+    - direnv
+    - zoxide
 
-  - bat
-  - exa
-  - git-delta
-  - gh
+    - bat
+    - exa
+    - git-delta
+    - gh
 
-  - awscli
-  - aws-sso-util
-  - awscurl
-  - git-remote-codecommit
-
-# - create:
+    - awscli
+    - aws-sso-util
+    - awscurl
+    - git-remote-codecommit

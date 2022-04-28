@@ -1,0 +1,42 @@
+; EditorConfig helps developers define and maintain consistent
+; coding styles between different editors and IDEs.
+
+; For more visit http://editorconfig.org.
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+end_of_line = lf
+charset = utf8
+
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[**/burp-rest-api/**/*.java]
+indent_size = 3
+tab_width = 3
+
+[*.py]
+indent_size = 4
+tab_width = 4
+
+[Config]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+[*.go]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+[*.fish]
+indent_size = 4
+tab_width = 4
+
+[*.sh]
+indent_size = 4
+tab_width = 4
