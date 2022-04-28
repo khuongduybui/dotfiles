@@ -7,6 +7,9 @@
   - command: sh/sudo.sh
     description: Install passwordless sudo.
     stderr: true
+  - command: sh/brew.sh
+    description: Install homebrew.
+    stderr: true
 
 - clean: ['~']
 
@@ -26,6 +29,7 @@
   - bat
   - exa
   - git-delta
+  - gh
 
   - awscli
   - aws-sso-util
