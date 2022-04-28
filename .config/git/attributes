@@ -1,0 +1,19 @@
+*.gpg filter=gpg diff=gpg
+
+*.go filter=difftastic diff=difftastic
+*.rs filter=difftastic diff=difftastic
+*.java filter=difftastic diff=difftastic
+*.scala filter=difftastic diff=difftastic
+
+*.py filter=difftastic diff=difftastic
+*.rb filter=difftastic diff=difftastic
+*.php filter=difftastic diff=difftastic
+
+*.sh filter=difftastic diff=difftastic
+
+*.ts filter=difftastic diff=difftastic
+*.js filter=difftastic diff=difftastic
+
+*.json filter=difftastic diff=difftastic
+*.yaml filter=difftastic diff=difftastic
+*.yml filter=difftastic diff=difftastic

@@ -1,0 +1,10 @@
+.env.fish
+.env
+.envrc
+local-tests*
+remote-tests*
+localonly-*
+.dccache
+.vscode/
+.venv
+.nu-env

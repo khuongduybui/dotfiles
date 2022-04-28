@@ -1,0 +1,78 @@
+[user]
+name = Duy K. Bui
+email = duy@buifamily.info
+signingkey = D09B20421B84FD32
+
+[push]
+default = upstream
+
+[pull]
+rebase = true
+
+[remote]
+pushdefault = origin
+
+[color]
+ui = auto
+
+[core]
+pager = delta
+excludesfile = ~/.gitignore
+fileMode = false
+editor = code -w
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+features = line-numbers decorations
+whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+commit-decoration-style = bold yellow box ul
+file-style = bold yellow ul
+file-decoration-style = none
+
+[alias]
+dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+lg = log --color --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr: %ct)%C(reset) %C(bold blue)<%an>' --abbrev-commit
+hide = update-index --skip-worktree
+hide-untrack = ! git status --porcelain | sed -n -e 's/^?? //p' >>.git/info/exclude
+hidden = "! git ls-files -v | grep -i '^S' | cut -c3- && cat .git/info/exclude | grep -v '#'"
+unhide = update-index --no-skip-worktree
+unhide-all = ! git hidden | xargs git unhide
+hub = ! gh
+
+[diff]
+tool = vscode
+
+[difftool "vscode"]
+cmd = code -w --diff $LOCAL $REMOTE
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
+
+[diff "gpg"]
+textconv = gpg --no-tty --decrypt
+
+[diff "difftastic"]
+command = difft
+
+[merge]
+tool = vscode
+
+[mergetool "vscode"]
+cmd = code -w $MERGED
+
+[credential "codecommit://"]
+helper = !aws codecommit credential-helper $@
+UseHttpPath = true
+
+[credential "https://github.com"]
+helper = !gh auth git-credential
+
+[commit]
+gpgsign = true
+
+[tag]
+gpgsign = true

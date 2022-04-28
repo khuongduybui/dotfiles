@@ -22,6 +22,10 @@
     ~/.config/starship.toml: .config/starship.toml
 
     ~/.editorconfig: .editorconfig
+    ~/.gitconfig: default.gitconfig
+    ~/.gitignore: default.gitignore
+    ~/.config/git/attributes: .config/git/attributes
+    ~/.config/gh/config.yml: .config/gh/config.yml
 
 - brew:
     - fish
