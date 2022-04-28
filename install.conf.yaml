@@ -13,6 +13,7 @@
 - link:
     ~/.config/atuin/config.toml: .config/atuin/config.toml
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
+    ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
     ~/.config/fish/conf.d/functions: .config/fish/conf.d/functions
 
 - brew:

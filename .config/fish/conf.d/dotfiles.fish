@@ -28,9 +28,6 @@ if status --is-interactive
     complete -c ips -x -a '(__fish_complete_ips)'
     complete -c ssm-env -x -a '(__fish_complete_ssm-env)'
 
-    ## Abbreviations
-    source ~/setup/abbreviations.fish
-
     __is_day; and set -xU BAT_THEME "Monokai Extended Light"; or set -xU BAT_THEME "Monokai Extended"
 end
 
