@@ -38,3 +38,9 @@
     - aws-sso-util
     - awscurl
     - git-remote-codecommit
+
+- shell:
+    - command: brew upgrade
+      description: Update tools.
+    - command: sh/chsh.sh fish
+      description: Change user shell.
