@@ -9,6 +9,8 @@
       stderr: true
     - command: sh/brew.sh
       description: Install homebrew.
+    - command: curl https://get.trunk.io -fsSL | bash -s -- -y
+      description: Install Trunk.
 
 - clean: ["~"]
 
