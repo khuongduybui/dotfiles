@@ -12,5 +12,23 @@
 
 - link:
     ~/.config/atuin/config.toml: .config/atuin/config.toml
+    ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
+    ~/.config/fish/conf.d/functions: .config/fish/conf.d/functions
+
+- brew:
+  - fish
+  - atuin
+  - starship
+  - direnv
+  - zoxide
+
+  - bat
+  - exa
+  - git-delta
+
+  - awscli
+  - aws-sso-util
+  - awscurl
+  - git-remote-codecommit
 
 # - create:
