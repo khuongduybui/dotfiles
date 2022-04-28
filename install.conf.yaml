@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/atuin/config.toml: .config/atuin/config.toml
+
+# - create:
+
+# - shell:
