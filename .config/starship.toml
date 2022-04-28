@@ -1,0 +1,11 @@
+add_newline = true
+
+[aws]
+symbol = "☁️ "
+
+[python]
+format = "via [${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+
+[time]
+disabled = false
+format = "🕙 $time"
