@@ -15,6 +15,9 @@
 - clean: ["~"]
 
 - link:
+    ~/setup/backup-and-copy.sh: setup/backup-and-copy.sh
+    ~/setup/backup-and-link.sh: setup/backup-and-link.sh
+
     ~/.config/atuin/config.toml: .config/atuin/config.toml
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
     ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
