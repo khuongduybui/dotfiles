@@ -25,8 +25,8 @@
     ~/.config/starship.toml: .config/starship.toml
 
     ~/.editorconfig: .editorconfig
-    ~/.gitconfig: default.gitconfig
-    ~/.gitignore: default.gitignore
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
     ~/.config/git/attributes: .config/git/attributes
     ~/.config/gh/config.yml: .config/gh/config.yml
 
@@ -55,3 +55,35 @@
       description: Update tools.
     - command: sh/chsh.sh fish
       description: Change user shell.
+    - command: sh/asdf.sh
+      description: Install asdf.
+
+- asdf:
+    - plugin: deno
+      global: latest
+      versions:
+        - latest
+    - plugin: golang
+      global: latest
+      versions:
+        - latest
+    - plugin: nodejs
+      global: latest
+      versions:
+        - latest
+    - plugin: python
+      global: latest
+      versions:
+        - latest
+    - plugin: rust
+      global: latest
+      versions:
+        - latest
+
+- shell:
+    - command: sh/dev.sh
+      description: Install additional development tools.
+    - command: sh/aws.sh
+      description: Install additional aws tools.
+    - command: sh/shell-utils.sh
+      description: Install customer shell utils.

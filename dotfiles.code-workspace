@@ -8,13 +8,6 @@
 		}
 	],
 	"settings": {
-		"cSpell.customDictionaries": {
-			"custom-dictionary-workspace": {
-				"name": "custom-dictionary-workspace",
-				"path": "${workspaceFolder:dotfiles}/.cspell/custom-dictionary-workspace.txt",
-				"addWords": true,
-				"scope": "workspace"
-			}
-		}
+		"deno.enable": true
 	}
 }
