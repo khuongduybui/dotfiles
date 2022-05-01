@@ -30,6 +30,9 @@
     ~/.config/git/attributes: .config/git/attributes
     ~/.config/gh/config.yml: .config/gh/config.yml
 
+- create:
+    - ~/code
+
 - brew:
     - fish
     - atuin
