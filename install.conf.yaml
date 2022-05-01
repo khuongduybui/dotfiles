@@ -50,6 +50,7 @@
     - awscli
     - aws-sso-util
     - awscurl
+    - cfn-flip
     - git-remote-codecommit
 
 - shell:

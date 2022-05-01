@@ -1,8 +1,7 @@
 #! /usr/bin/env sh
 
-# trunk-ignore(shellcheck/SC1090)
-. ~/.asdf/asdf.sh
-
+pip install -U pipx
+asdf reshim
 mkdir -p /home/duybui/.virtualenvs
 pipx install virtualfish
 pipx ensurepath
