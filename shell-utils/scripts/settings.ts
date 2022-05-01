@@ -23,7 +23,9 @@ export async function main(
   const functionPath = path.join(
     await homeDirectory(),
     "dotfiles",
-    "fish-functions",
+    ".config",
+    "fish",
+    "functions",
     `${scriptName}.fish`
   );
   if (
