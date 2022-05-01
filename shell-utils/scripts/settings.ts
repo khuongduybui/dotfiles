@@ -14,15 +14,15 @@ export async function main(
   if (!scriptName) {
     const configPath = path.join(
       await homeDirectory(),
-      "setup",
-      "setup.code-workspace"
+      "dotfiles",
+      "dotfiles.code-workspace"
     );
     return edit(configPath);
   }
 
   const functionPath = path.join(
     await homeDirectory(),
-    "setup",
+    "dotfiles",
     "fish-functions",
     `${scriptName}.fish`
   );
@@ -36,12 +36,12 @@ export async function main(
 
   const scriptPath = path.join(
     await homeDirectory(),
-    "setup",
+    "dotfiles",
     "shell-utils",
     "scripts",
     `${scriptName}.ts`
   );
-  log.info(`Editing ~/setup/shell-utils/scripts/${scriptName}`);
+  log.info(`Editing ~/dotfiles/shell-utils/scripts/${scriptName}`);
   return edit(scriptPath);
 }
 
