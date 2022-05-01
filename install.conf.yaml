@@ -46,6 +46,7 @@
     - exa
     - git-delta
     - gh
+    - zip
 
     - awscli
     - aws-sso-util
