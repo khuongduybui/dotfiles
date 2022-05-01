@@ -1,14 +1,14 @@
 import * as log from "https://deno.land/std@0.109.0/log/mod.ts";
 
 import { cac } from "https://unpkg.com/cac/mod.ts";
-import { opn as open } from "https://denopkg.com/hashrock/deno-opn/opn.ts";
+import { open } from "https://denopkg.com/hashrock/deno-opn@master/mod.ts";
 
 import { editor } from "../utils.ts";
 
 export async function main(file: string, options = { wait: true }) {
   const editorCommand = await editor(options);
   log.info(`Opening ${file} with ${editorCommand[0]}`);
-  await open(file, { app: editorCommand });
+  await open(file, { with: editorCommand });
 }
 
 const cli = cac((import.meta.url.split("/").pop() ?? "").replace(".ts", ""));
