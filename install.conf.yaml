@@ -91,3 +91,5 @@
       description: Install additional aws tools.
     - command: sh/shell-utils.sh
       description: Install customer shell utils.
+    - command: sh/sft.sh
+      description: Install ScaleFt.
