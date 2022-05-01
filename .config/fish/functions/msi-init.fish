@@ -1,19 +1,20 @@
-# Defined in /tmp/fish.Vzqxp5/msi-init.fish @ line 2
 function msi-init
+    set -l verbose off
+    if test (echo $argv[1]) = "-v"
+        set -x verbose on
+    end
+
+    echo "====== AWS SSO login ======"
     aws-sso-util login --all
 
-    echo https://gateway1.hawk.activeeye.com/gateway
-    x-www-browser https://gateway1.hawk.activeeye.com/gateway
-    echo https://gateway1.wasp.activeeye.com/gateway
-    x-www-browser https://gateway1.wasp.activeeye.com/gateway
-    echo https://gateway1.lion.activeeye.com/gateway
-    x-www-browser https://gateway1.lion.activeeye.com/gateway
-    echo https://gateway1.orca.activeeye.com/gateway
-    x-www-browser https://gateway1.orca.activeeye.com/gateway
-    # echo https://gateway1.ibex.activeeye.com/gateway
-    # x-www-browser https://gateway1.ibex.activeeye.com/gateway
-    echo https://gateway1.wolf.activeeye.com/gateway
-    x-www-browser https://gateway1.wolf.activeeye.com/gateway
+    echo "==== ActiveEye Gateway ===="
+    for pod in hawk wasp lion orca wolf
+        if test (echo $verbose) = "on"
+            echo "https://gateway1.$pod.activeeye.com/gateway"
+        end
+        xdg-open "https://gateway1.$pod.activeeye.com/gateway"
+    end
 
-    sft list-servers >/dev/null
+    echo "========= ScaleFt ========="
+    sft login
 end
