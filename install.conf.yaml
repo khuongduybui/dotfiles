@@ -38,6 +38,7 @@
     - direnv
     - fish
     - fzf
+    - jq
     - pass
     - starship
     - zoxide
