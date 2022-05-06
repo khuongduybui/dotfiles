@@ -94,3 +94,5 @@
       description: Install customer shell utils.
     - command: sh/sft.sh
       description: Install ScaleFt.
+    - command: ~/setup/backup-and-link.sh ~/setup/wsl.conf /etc/
+      description: Link WSL config.
