@@ -47,6 +47,8 @@
     - exa
     - git-delta
     - gh
+    - httpie
+    - micro
     - zip
 
     - awscli
@@ -94,5 +96,5 @@
       description: Install customer shell utils.
     - command: sh/sft.sh
       description: Install ScaleFt.
-    - command: ~/setup/backup-and-link.sh ~/setup/wsl.conf /etc/
+    - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
