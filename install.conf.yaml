@@ -45,6 +45,7 @@
     - util-linux
     - zoxide
 
+    - asciinema
     - bat
     - exa
     - git-delta
