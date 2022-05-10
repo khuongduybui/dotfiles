@@ -42,6 +42,7 @@
     - jq
     - pass
     - starship
+    - util-linux
     - zoxide
 
     - bat
