@@ -8,7 +8,7 @@ function msi-init
     aws-sso-util login --all
 
     echo "==== ActiveEye Gateway ===="
-    for pod in hawk wasp lion orca wolf
+    for pod in hawk wasp lion orca wolf bear
         if test (echo $verbose) = "on"
             echo "https://gateway1.$pod.activeeye.com/gateway"
         end
