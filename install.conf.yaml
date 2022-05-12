@@ -26,6 +26,7 @@
     ~/.config/starship.toml: .config/starship.toml
 
     ~/.editorconfig: .editorconfig
+    ~/.prettierrc.yaml: .prettierrc.yaml
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
     ~/.config/git/attributes: .config/git/attributes
