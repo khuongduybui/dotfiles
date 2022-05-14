@@ -1,16 +1,16 @@
 function msi-init
-    echo "====== AWS SSO login ======"
+    rich --panel rounded -c -p "[bold italic]AWS SSO"
     aws-sso-util login --all
 
-    echo "========= ScaleFt ========="
+    rich --panel rounded -c -p "[bold italic]ScaleFt"
     sft login
 
-    echo "==== ActiveEye Gateway ===="
+    rich --panel rounded -c -p "[bold italic]ActiveEye Gateway"
     for pod in hawk wasp lion orca wolf bear
-        if ssh -q gateway1.ec2.$pod.activeeye.com exit
-            echo "gateway1.ec2.$pod.activeeye.com is up"
+        if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
+            rich -p "[green][bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is up"
         else
-            echo "https://gateway1.$pod.activeeye.com/gateway"
+            rich -p "[blue]Invoking [bold italic]https://gateway1.$pod.activeeye.com/gateway"
             xdg-open "https://gateway1.$pod.activeeye.com/gateway"
         end
     end
