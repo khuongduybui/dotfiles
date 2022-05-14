@@ -45,6 +45,7 @@
     - rich-cli
     - starship
     - util-linux
+    - yq
     - zoxide
 
     - asciinema
