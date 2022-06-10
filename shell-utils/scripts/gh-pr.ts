@@ -24,8 +24,8 @@ export async function main(base: string) {
       "gh pr view --jq .title --json title",
       {
         output: OutputMode.Capture,
+        env: { DEBUG: "" },
       },
-      { env: { DEBUG: "" } }
     )
   ).output.trim();
   const url = (
@@ -33,8 +33,8 @@ export async function main(base: string) {
       "gh pr view --jq .url --json url",
       {
         output: OutputMode.Capture,
+        env: { DEBUG: "" },
       },
-      { env: { DEBUG: "" } }
     )
   ).output.trim();
   // log.info({ title, url });
