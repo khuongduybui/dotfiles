@@ -1,7 +1,7 @@
 import {
   exec,
   OutputMode,
-} from "https://raw.githubusercontent.com/khuongduybui/deno-exec/master/mod.ts";
+} from "https://raw.githubusercontent.com/gpasq/deno-exec/master/mod.ts";
 import {
   basename,
   dirname,

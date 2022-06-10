@@ -5,7 +5,7 @@ import { cac } from "https://unpkg.com/cac@6.7.12/mod.ts";
 import {
   exec,
   OutputMode,
-} from "https://raw.githubusercontent.com/khuongduybui/deno-exec/master/mod.ts";
+} from "https://raw.githubusercontent.com/gpasq/deno-exec/master/mod.ts";
 import {
   currentDirectory,
   gitBranch,
