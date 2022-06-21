@@ -42,6 +42,7 @@ hidden = "! git ls-files -v | grep -i '^S' | cut -c3- && cat .git/info/exclude |
 unhide = update-index --no-skip-worktree
 unhide-all = ! git hidden | xargs git unhide
 hub = ! gh
+trunk = ! trunk
 
 [diff]
 tool = vscode
