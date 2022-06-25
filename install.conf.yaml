@@ -40,8 +40,10 @@
     - direnv
     - fish
     - fzf
+    - fx
     - jq
     - pass
+    - nushell
     - rich-cli
     - starship
     - util-linux
