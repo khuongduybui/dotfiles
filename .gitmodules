@@ -10,7 +10,3 @@
 	path = dotbot-asdf
 	url = https://github.com/sobolevn/dotbot-asdf.git
 	ignore = dirty
-[submodule "dotbot-apt"]
-	path = dotbot-apt
-	url = https://github.com/bryant1410/dotbot-apt
-	ignore = dirty

@@ -61,6 +61,7 @@ abbr edge microsoft-edge
 abbr winget 'winget.exe'
 abbr winst 'winget.exe install'
 abbr wsl 'wsl.exe'
+abbr wez '~/winhome/OneDrive/Software/scratch/WezTerm/wezterm.exe start --'
 abbr awscli 'aws --cli-auto-prompt'
 abbr myid 'bw sync; bw list items | jq -r ".[] | select(.type == 4)"'
 abbr up 'docker-compose up'
