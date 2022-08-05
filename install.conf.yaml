@@ -32,6 +32,8 @@
     ~/.config/git/attributes: .config/git/attributes
     ~/.config/gh/config.yml: .config/gh/config.yml
 
+    ~/.config/.jira/.config.yml: .config/.jira/.config.yml
+
 - create:
     - ~/code
 

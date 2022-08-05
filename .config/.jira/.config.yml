@@ -1,0 +1,61 @@
+board:
+  id: 19
+  name: AE board
+  type: kanban
+epic:
+  name: customfield_10005
+  link: customfield_10008
+installation: Cloud
+issue:
+  fields:
+    custom:
+      - name: Epic Link
+        key: customfield_10008
+        schema:
+          datatype: any
+      - name: Start date
+        key: customfield_10045
+        schema:
+          datatype: date
+      - name: Target start
+        key: customfield_10052
+        schema:
+          datatype: date
+      - name: Target end
+        key: customfield_10053
+        schema:
+          datatype: date
+      - name: Epic Name
+        key: customfield_10005
+        schema:
+          datatype: string
+  types:
+    - id: '10002'
+      name: Task
+      handle: Task
+      subtask: false
+    - id: '10003'
+      name: Sub-task
+      handle: Sub-task
+      subtask: true
+    - id: '10001'
+      name: Story
+      handle: Story
+      subtask: false
+    - id: '10004'
+      name: Bug
+      handle: Bug
+      subtask: false
+    - id: '10000'
+      name: Epic
+      handle: Epic
+      subtask: false
+    - id: '10027'
+      name: Initiative
+      handle: Initiative
+      subtask: false
+login: duy.bui@motorolasolutions.com
+project:
+  key: AE
+  type: classic
+server: https://deltarisk.atlassian.net
