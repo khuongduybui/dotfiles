@@ -77,3 +77,9 @@ gpgsign = true
 
 [tag]
 gpgsign = true
+
+[gpg]
+format = x509
+
+[gpg "x509"]
+program = gitsign

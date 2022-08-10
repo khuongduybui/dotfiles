@@ -12,7 +12,7 @@
     - command: curl https://get.trunk.io -fsSL | bash -s -- -y
       description: Install Trunk.
 
-- clean: ["~"]
+- clean: ['~']
 
 - link:
     ~/setup/backup-and-copy.sh: setup/backup-and-copy.sh
@@ -37,6 +37,9 @@
 - create:
     - ~/code
 
+- tap:
+    - sigstore/tap
+    - ankitpokhrel/jira-cli
 - brew:
     - atuin
     - direnv
@@ -55,9 +58,11 @@
     - asciinema
     - bat
     - exa
-    - git-delta
     - gh
+    - git-delta
+    - gitsign
     - httpie
+    - jira-cli
     - micro
     - zip
 
