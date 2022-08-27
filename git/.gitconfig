@@ -72,6 +72,9 @@ UseHttpPath = true
 [credential "https://github.com"]
 helper = !gh auth git-credential
 
+[credential "https://bitbucket.mot-solutions.com"]
+helper = store
+
 [commit]
 gpgsign = true
 
@@ -83,3 +86,6 @@ format = x509
 
 [gpg "x509"]
 program = gitsign
+
+[include]
+path = /home/duybui/.git-login.creds
