@@ -40,6 +40,8 @@
 - tap:
     - sigstore/tap
     - ankitpokhrel/jira-cli
+    - aws/tap
+
 - brew:
     - atuin
     - direnv
@@ -67,6 +69,7 @@
     - zip
 
     - awscli
+    - aws-sam-cli
     - aws-sso-util
     - awscurl
     - cfn-flip
