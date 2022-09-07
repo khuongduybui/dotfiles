@@ -43,6 +43,7 @@ unhide = update-index --no-skip-worktree
 unhide-all = ! git hidden | xargs git unhide
 hub = ! gh
 trunk = ! trunk
+publish = ! git push -u origin $(git branch --points-at HEAD | awk '{print $2}')
 
 [diff]
 tool = vscode
