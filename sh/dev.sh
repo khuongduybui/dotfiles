@@ -13,7 +13,7 @@ cargo install difftastic
 
 asdf reshim
 
-curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+test -e ~/.iterm2_shell_integration.fish || curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 gh extension install mislav/gh-branch
 gh extension install redraw/gh-install
