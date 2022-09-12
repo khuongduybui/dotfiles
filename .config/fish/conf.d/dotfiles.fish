@@ -89,7 +89,8 @@ type -q jt; and test -e ~/.config/jira; and jt completion fish | source
 
 type -q atuin; and atuin init fish | source; and set -Ux ATUIN_SUPPRESS_TUI true
 
-# string match -q "$TERM_PROGRAM" vscode
-test -x code
+string match -q "$TERM_PROGRAM" vscode
+and test -x code
 and test -e (code --locate-shell-integration-path fish | sed -e 's/-fish//')
 and . (code --locate-shell-integration-path fish | sed -e 's/-fish//')
+or true
