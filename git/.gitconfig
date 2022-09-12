@@ -75,6 +75,7 @@ helper = !gh auth git-credential
 
 [credential "https://bitbucket.mot-solutions.com"]
 helper = store
+username = WCXT47
 
 [commit]
 gpgsign = true
