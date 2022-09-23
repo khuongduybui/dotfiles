@@ -91,3 +91,6 @@ program = gitsign
 
 [include]
 path = /home/duybui/.git-login.creds
+
+[gitsign]
+connectorID = https://github.com/login/oauth
