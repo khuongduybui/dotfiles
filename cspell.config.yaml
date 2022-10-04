@@ -3,11 +3,26 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - ankitpokhrel
+  - asciinema
   - atuin
   - awscurl
   - chsh
+  - customfield
+  - devcontainer
   - direnv
+  - funced
+  - gitsign
+  - httpie
+  - markdownlint
+  - nushell
   - passwordless
+  - Rhum
+  - SCRIPTDIR
+  - signin
+  - sigstore
+  - subl
+  - wslpath
   - zoxide
 ignoreWords: []
 import: []

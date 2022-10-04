@@ -1,7 +1,7 @@
 import * as log from "https://deno.land/std@0.129.0/log/mod.ts";
 import * as path from "https://deno.land/std@0.129.0/path/mod.ts";
 
-import { cac } from "https://unpkg.com/cac@6.7.12/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 
 import { homeDirectory, pathExists, windowsToWslPath } from "../utils.ts";
 

@@ -5,9 +5,6 @@
 		}
 	],
 	"settings": {
-		"deno.enable": true,
-		"cSpell.words": [
-			"customfield"
-		]
+		"deno.enable": true
 	}
 }

@@ -1,6 +1,6 @@
 import * as log from "https://deno.land/std@0.109.0/log/mod.ts";
 
-import { cac } from "https://unpkg.com/cac/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 import { open } from "https://denopkg.com/hashrock/deno-opn@master/mod.ts";
 
 import { editor } from "../utils.ts";

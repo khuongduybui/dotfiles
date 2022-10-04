@@ -2,7 +2,7 @@ import * as log from "https://deno.land/std@0.109.0/log/mod.ts";
 // import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 import { v4 as uuid } from "https://deno.land/std@0.109.0/uuid/mod.ts";
 
-import { cac } from "https://unpkg.com/cac/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 // import { decode as parseIni } from "https://deno.land/x/ini/mod.ts";
 import { STS } from "https://deno.land/x/aws_sdk@v3.32.0-1/client-sts/mod.ts";
 
@@ -22,7 +22,7 @@ export async function main(profile?: string) {
     const selected = await fuzzyShell(
       ["fish", "-c"],
       profile,
-      `cat ~/.aws/config | grep -e '\\[profile' | sed -e 's/\\[profile //' -e 's/\\]//'`
+      `cat ~/.aws/config | grep -e '\\[profile' | sed -e 's/\\[profile //' -e 's/\\]//'`,
     );
     Deno.env.set("AWS_PROFILE", selected);
     log.info(`Selecting profile ${Deno.env.get("AWS_PROFILE")}`);
@@ -48,9 +48,12 @@ export async function main(profile?: string) {
   log.debug(session);
 
   log.info("Obtaining signin token");
-  const signinUrl = `https://signin.aws.amazon.com/federation?Action=getSigninToken&Session=${encodeURIComponent(
-    JSON.stringify(session)
-  )}`;
+  const signinUrl =
+    `https://signin.aws.amazon.com/federation?Action=getSigninToken&Session=${
+      encodeURIComponent(
+        JSON.stringify(session),
+      )
+    }`;
   log.debug(signinUrl);
   const signin = await fetch(signinUrl);
   if (signin.status != 200) {
@@ -64,13 +67,19 @@ export async function main(profile?: string) {
   log.debug(token);
 
   log.info("Generating shortened URL");
-  const fullUrl = `https://signin.aws.amazon.com/federation?Action=login&Destination=${encodeURIComponent(
-    "https://console.aws.amazon.com"
-  )}&SigninToken=${encodeURIComponent(token)}`;
+  const fullUrl =
+    `https://signin.aws.amazon.com/federation?Action=login&Destination=${
+      encodeURIComponent(
+        "https://console.aws.amazon.com",
+      )
+    }&SigninToken=${encodeURIComponent(token)}`;
   log.debug(fullUrl);
-  const shortenUrl = `https://cutt.ly/api/api.php?key=a2967c0ad7db4197d8244182b087888e05a64&name=aws-${profile}-${username}-${uuid.generate()}&short=${encodeURIComponent(
-    fullUrl
-  )}`;
+  const shortenUrl =
+    `https://cutt.ly/api/api.php?key=a2967c0ad7db4197d8244182b087888e05a64&name=aws-${profile}-${username}-${uuid.generate()}&short=${
+      encodeURIComponent(
+        fullUrl,
+      )
+    }`;
   log.debug(shortenUrl);
   const shorten = await fetch(shortenUrl);
   if (shorten.status != 200) {

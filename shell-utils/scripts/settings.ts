@@ -2,20 +2,20 @@ import * as fs from "https://deno.land/std@0.109.0/fs/mod.ts";
 import * as log from "https://deno.land/std@0.109.0/log/mod.ts";
 import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 
-import { cac } from "https://unpkg.com/cac/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 
 import { main as edit } from "./edit.ts";
 import { homeDirectory, invokeShell } from "../utils.ts";
 
 export async function main(
   scriptName: string | undefined,
-  options: { function: boolean; script: boolean }
+  options: { function: boolean; script: boolean },
 ) {
   if (!scriptName) {
     const configPath = path.join(
       await homeDirectory(),
       "dotfiles",
-      "dotfiles.code-workspace"
+      "dotfiles.code-workspace",
     );
     return edit(configPath);
   }
@@ -26,7 +26,7 @@ export async function main(
     ".config",
     "fish",
     "functions",
-    `${scriptName}.fish`
+    `${scriptName}.fish`,
   );
   if (
     !options.script &&
@@ -41,7 +41,7 @@ export async function main(
     "dotfiles",
     "shell-utils",
     "scripts",
-    `${scriptName}.ts`
+    `${scriptName}.ts`,
   );
   log.info(`Editing ~/dotfiles/shell-utils/scripts/${scriptName}`);
   return edit(scriptPath);
@@ -55,10 +55,10 @@ cli
   .action(
     async (
       scriptName: string | undefined,
-      options: { function: boolean; script: boolean }
+      options: { function: boolean; script: boolean },
     ) => {
       await main(scriptName, options);
-    }
+    },
   );
 cli.help();
 

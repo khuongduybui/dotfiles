@@ -2,7 +2,7 @@ import * as fs from "https://deno.land/std@0.109.0/fs/mod.ts";
 import * as log from "https://deno.land/std@0.109.0/log/mod.ts";
 import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 
-import { cac } from "https://unpkg.com/cac/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 import json5 from "https://cdn.skypack.dev/json5?dts";
 
 import { homeDirectory } from "../utils.ts";
@@ -24,7 +24,7 @@ export function isDevcontainer(projectPath: string): Promise<boolean> {
 
 export async function processProjectDir(
   codeDir: string,
-  projectDir: { path: string; name: string }
+  projectDir: { path: string; name: string },
 ) {
   log.info(`Processing ${projectDir.name}`);
   const extension = "code-workspace";
@@ -42,13 +42,15 @@ export async function processProjectDir(
       .map((dir: { path: string }) => dir.path)
       .filter((dirPath: string) =>
         fs.existsSync(path.resolve(codeDir, dirPath))
-      )
+      ),
   );
-  for await (const componentDir of fs.walk(projectDir.path, {
-    maxDepth: 1,
-    includeFiles: false,
-    includeDirs: true,
-  })) {
+  for await (
+    const componentDir of fs.walk(projectDir.path, {
+      maxDepth: 1,
+      includeFiles: false,
+      includeDirs: true,
+    })
+  ) {
     if (projectDir.path === componentDir.path) continue;
     folders.add(path.relative(codeDir, componentDir.path));
   }
@@ -60,11 +62,13 @@ export async function processProjectDir(
 
 export async function processCodeDir(codeDir: string) {
   log.info(`Looking in ${codeDir}`);
-  for await (const projectDir of fs.walk(codeDir, {
-    maxDepth: 1,
-    includeFiles: false,
-    includeDirs: true,
-  })) {
+  for await (
+    const projectDir of fs.walk(codeDir, {
+      maxDepth: 1,
+      includeFiles: false,
+      includeDirs: true,
+    })
+  ) {
     if (projectDir.path === codeDir) continue;
     if (await isDevcontainer(projectDir.path)) {
       log.info(`Skipping ${projectDir.name} (.devcontainer exists)`);

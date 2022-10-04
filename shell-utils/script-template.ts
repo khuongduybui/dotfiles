@@ -1,6 +1,6 @@
 import * as log from "https://deno.land/std@0.129.0/log/mod.ts";
 
-import { cac } from "https://unpkg.com/cac@6.7.12/mod.ts";
+import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
 
 export async function main(argument: string, options: options) {
   log.info(`Doing something with ${argument} and ${options}`);
