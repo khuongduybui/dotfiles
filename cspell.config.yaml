@@ -9,6 +9,7 @@ words:
   - awscurl
   - chsh
   - customfield
+  - deno
   - devcontainer
   - direnv
   - funced
@@ -22,6 +23,7 @@ words:
   - signin
   - sigstore
   - subl
+  - taplo
   - wslpath
   - zoxide
 ignoreWords: []
