@@ -4,6 +4,7 @@ __clean_missing PATH
 __ensure_path ~/bin
 __ensure_path ~/.local/bin
 __ensure_path ~/.cargo/bin
+__ensure_path ~/.deno/bin
 if test -d ~/Android/Sdk
     set -xU ANDROID_HOME "$HOME/Android/Sdk"
     __ensure_path ~/Android/Sdk/platform-tools
