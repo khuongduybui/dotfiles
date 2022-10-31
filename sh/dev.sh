@@ -11,6 +11,8 @@ pipx upgrade-all
 
 cargo install difftastic
 
+npm install -g dotenv-vault nativescript
+
 asdf reshim
 
 test -e ~/.iterm2_shell_integration.fish || curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
