@@ -6,12 +6,14 @@ words:
   - ankitpokhrel
   - asciinema
   - atuin
+  - awscli
   - awscurl
   - chsh
   - customfield
   - deno
   - devcontainer
   - direnv
+  - dotfiles
   - funced
   - gitsign
   - httpie
