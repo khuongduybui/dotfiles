@@ -88,7 +88,7 @@ type -q zoxide; and zoxide init fish | sed "s/complete -e z/complete -c z -e/" |
 
 type -q jt; and test -e ~/.config/jira; and jt completion fish | source
 
-type -q atuin; and atuin init fish | source; and set -Ux ATUIN_SUPPRESS_TUI true
+type -q atuin; and atuin init fish | source; and atuin gen-completions --shell fish >~/.config/fish/completions/atuin.fish; # and set -Ux ATUIN_SUPPRESS_TUI true
 
 string match -q "$TERM_PROGRAM" vscode
 and test -x code
