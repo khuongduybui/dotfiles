@@ -108,6 +108,8 @@
         - latest
 
 - shell:
+    - command: sh/asdf-cleanup.sh
+      description: Clean up unused asdf versions.
     - command: sh/dev.sh
       description: Install additional development tools.
     - command: sh/aws.sh

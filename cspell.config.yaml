@@ -26,6 +26,7 @@ words:
   - sigstore
   - subl
   - taplo
+  - topgrade
   - wslpath
   - zoxide
 ignoreWords: []
