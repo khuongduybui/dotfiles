@@ -57,6 +57,7 @@
     - util-linux
     - yq
     - zoxide
+    - topgrade
 
     - asciinema
     - bat
