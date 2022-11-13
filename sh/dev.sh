@@ -9,7 +9,7 @@ fish -c "vf install"
 fish -c "vf addplugins auto_activation"
 pipx upgrade-all
 
-cargo install difftastic
+cargo install difftastic cargo-update
 
 npm install -g dotenv-vault nativescript
 
