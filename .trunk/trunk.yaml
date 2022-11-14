@@ -1,6 +1,10 @@
 version: 0.1
+runtimes:
+  enabled:
+    - go@1.18.3
+    - node@16.14.2
 cli:
-  version: 0.18.1-beta
+  version: 1.1.0
 lint:
   definitions:
     - name: deno-ts
@@ -14,14 +18,23 @@ lint:
           success_codes:
             - 0
   enabled:
-    - gitleaks@8.3.0
-    - markdownlint@0.31.1
-    - prettier@2.5.1
+    - git-diff-check
+    - gitleaks@8.15.0
+    - markdownlint@0.32.2
+    - prettier@2.7.1
     - shellcheck@0.8.0
-    - shfmt@3.4.0
-    - taplo@release-cli-0.6.0
+    - shfmt@3.5.0
+    - taplo@0.8.0
     - deno-ts
   ignore:
     - linters: [prettier]
       paths:
         - shell-utils/**/*.ts
+actions:
+  enabled:
+    - trunk-upgrade-available
+plugins:
+  sources:
+    - id: trunk
+      ref: v0.0.6
+      uri: https://github.com/trunk-io/plugins
