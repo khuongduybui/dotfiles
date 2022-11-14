@@ -120,3 +120,4 @@
       description: Install ScaleFt.
     - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
+    - command: topgrade --no-retry
