@@ -5,7 +5,7 @@ function msi-init
     rich -a rounded -S blue --style blue -p "ScaleFt"
     sft login
 
-    if not test -f ~/.disable-bitbucket
+    if hostname | grep -q msi
         rich -a rounded -S blue --style blue -p "MSI BitBucket"
         if test -e ~/iap.header; and test (jq -R 'split(".") | .[1] | @base64d | fromjson | .exp' <~/iap.header) -gt (now)
             set -l exp (math (jq -R 'split(".") | .[1] | @base64d | fromjson | .exp' <~/iap.header) - (now))
