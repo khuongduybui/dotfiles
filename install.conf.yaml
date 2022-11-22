@@ -124,3 +124,6 @@
     - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
     - command: topgrade --no-retry --yes
+      description: Update system.
+    - command: atuin sync
+      description: Shell history sync.
