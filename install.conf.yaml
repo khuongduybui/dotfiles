@@ -46,6 +46,7 @@
 - brew:
     - atuin
     - direnv
+    - fd
     - fish
     - fzf
     - fx
