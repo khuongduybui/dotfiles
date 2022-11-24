@@ -98,14 +98,17 @@
       versions:
         - latest
     - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
       global: latest
       versions:
         - latest
     - plugin: python
+      url: https://github.com/danhper/asdf-python.git
       global: latest
       versions:
         - latest
     - plugin: rust
+      url: https://github.com/code-lever/asdf-rust.git
       global: latest
       versions:
         - latest
