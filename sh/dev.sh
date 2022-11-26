@@ -11,7 +11,7 @@ pipx upgrade-all
 
 cargo install difftastic cargo-update
 
-npm install -g dotenv-vault nativescript
+npm install -g dotenv-vault
 
 asdf reshim
 
