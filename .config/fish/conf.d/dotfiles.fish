@@ -80,7 +80,7 @@ if test -z $INIT
 end
 
 ### Shell
-type -q starship; and source (starship init fish --print-full-init | psub)
+type -q starship; and source (starship init fish --print-full-init | psub); and enable_transience
 
 type -q direnv; and direnv hook fish | source
 
