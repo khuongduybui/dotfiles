@@ -10,7 +10,7 @@ cp dotbot/tools/git-submodule/install ~/dotfiles/install
 
 ~/dotfiles/install --config-file prerequisites.conf.yaml
 test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-test -f ~/.asdf/asdf.sh && source ~/.asdf/asdf.sh
+test -f ~/.asdf/asdf.sh && . ~/.asdf/asdf.sh
 
 ~/dotfiles/install --plugin-dir dotbot-asdf --plugin-dir dotbot-brew
 
