@@ -111,6 +111,7 @@
 
 - shell:
   - command: bash -l -c 'gh auth status 2>&1 | grep -qi "logged in" || gh auth login'
+    description: GitHub login.
     stdin: true
     stdout: true
     stderr: true
@@ -127,6 +128,7 @@
   - command: topgrade --no-retry --yes --disable containers
     description: Update system.
   - command: atuin login
+    description: Atuin login.
     stdin: true
     stdout: true
     stderr: true
