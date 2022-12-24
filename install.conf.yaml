@@ -77,7 +77,7 @@
 
 
 - shell:
-    - command: sh/asdf.sh
+    - command: sh/asdf-preinstall.sh
       description: Install asdf.
 - asdf:
     - plugin: deno
