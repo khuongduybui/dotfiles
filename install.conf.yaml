@@ -79,13 +79,15 @@
     - git-remote-codecommit
 
 - shell:
-    - command: brew upgrade
+    - command: bash -l -c "brew upgrade"
       description: Update tools.
-    - command: sh/chsh.sh fish
+    - command: bash -l sh/chsh.sh fish
       description: Change user shell.
+
+
+- shell:
     - command: sh/asdf.sh
       description: Install asdf.
-
 - asdf:
     - plugin: deno
       url: https://github.com/asdf-community/asdf-deno.git
@@ -112,21 +114,22 @@
       global: latest
       versions:
         - latest
-
 - shell:
     - command: sh/asdf-cleanup.sh
       description: Clean up unused asdf versions.
-    - command: sh/dev.sh
-      description: Install additional development tools.
-    - command: sh/aws.sh
-      description: Install additional aws tools.
-    - command: sh/shell-utils.sh
-      description: Install customer shell utils.
-    - command: sh/sft.sh
-      description: Install ScaleFt.
-    - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
-      description: Link WSL config.
-    - command: topgrade --no-retry --yes --disable containers
-      description: Update system.
-    - command: atuin sync
-      description: Shell history sync.
+
+- shell:
+  - command: sh/dev.sh
+    description: Install additional development tools.
+  - command: sh/aws.sh
+    description: Install additional aws tools.
+  - command: sh/shell-utils.sh
+    description: Install customer shell utils.
+  - command: sh/sft.sh
+    description: Install ScaleFt.
+  - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
+    description: Link WSL config.
+  - command: topgrade --no-retry --yes --disable containers
+    description: Update system.
+  - command: atuin sync
+    description: Shell history sync.

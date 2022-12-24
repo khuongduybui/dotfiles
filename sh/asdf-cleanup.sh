@@ -14,3 +14,7 @@ for plugin in $(asdf plugin list); do
         fi
     done
 done
+
+if [ -d /home/linuxbrew/.linuxbrew/bin.bak ]; then
+    mv /home/linuxbrew/.linuxbrew/bin.bak /home/linuxbrew/.linuxbrew/bin
+fi
