@@ -6,9 +6,9 @@
 - shell:
     - command: sh/sudo.sh
       description: Install passwordless sudo.
+      stdin: true
       stderr: true
-    - command: sh/brew.sh
-      description: Install homebrew.
+      stdout: true
     - command: curl https://get.trunk.io -fsSL | bash -s -- -y
       description: Install Trunk.
 
