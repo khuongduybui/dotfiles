@@ -1,0 +1,12 @@
+- shell:
+    - command: sh/sudo.sh
+      description: Install passwordless sudo.
+      stdin: true
+      stderr: true
+      stdout: true
+    - command: sh/brew.sh
+      description: Install Homebrew.
+    - command: sh/trunk.sh
+      description: Install Trunk.
+    - command: sh/asdf.sh
+      description: Install asdf-vm.

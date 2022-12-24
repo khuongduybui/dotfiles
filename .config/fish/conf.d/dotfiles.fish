@@ -12,6 +12,7 @@ if test -d ~/Android/Sdk
 else
     set -e ANDROID_HOME
 end
+test -f ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 varclear PATH
 set -xU PATH $PATH
 

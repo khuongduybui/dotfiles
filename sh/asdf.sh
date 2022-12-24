@@ -4,7 +4,6 @@ if [ ! -d ~/.asdf ]; then
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
     mkdir -p ~/.config/fish/completions
     cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
-    cp ~/.asdf/asdf.fish ~/.config/fish/conf.d/asdf.fish
 else
     asdf update
     asdf plugin update --all
@@ -15,7 +14,3 @@ sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-
 sudo apt install -y llvm || true
 sudo apt install -y tk-dev || true
 sudo apt install -y librust-openssl-dev || sudo apt install -y libssl-dev
-
-if [ -d /home/linuxbrew/.linuxbrew/bin ]; then
-    mv /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/bin.bak
-fi

@@ -3,15 +3,6 @@
       create: true
       relink: true
 
-- shell:
-    - command: sh/sudo.sh
-      description: Install passwordless sudo.
-      stdin: true
-      stderr: true
-      stdout: true
-    - command: curl https://get.trunk.io -fsSL | bash -s -- -y
-      description: Install Trunk.
-
 - clean: ['~']
 
 - link:
