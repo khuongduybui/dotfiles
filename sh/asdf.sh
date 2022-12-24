@@ -4,6 +4,7 @@ if [ ! -d ~/.asdf ]; then
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
     mkdir -p ~/.config/fish/completions
     cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+    echo '. ~/.asdf/asdf.sh' >> ~/.profile
 else
     asdf update
     asdf plugin update --all
