@@ -9,5 +9,5 @@ My personal dotfiles; feel free to browse, but it's not designed for sharing.
 ## install
 
 ```sh
-curl -s https://raw.githubusercontent.com/khuongduybui/dotfiles/main/init.sh | sh -
+curl -s -H "Cache-Control: no-cache, no-store, must-revalidate" -H "Pragma: no-cache" https://raw.githubusercontent.com/khuongduybui/dotfiles/main/init.sh | bash -
 ```
