@@ -110,6 +110,10 @@
       description: Clean up unused asdf versions.
 
 - shell:
+  - command: bash -l -c 'gh auth status 2>&1 | grep -qi "logged in" || gh auth login'
+    stdin: true
+    stdout: true
+    stderr: true
   - command: sh/dev.sh
     description: Install additional development tools.
   - command: sh/aws.sh
@@ -122,5 +126,9 @@
     description: Link WSL config.
   - command: topgrade --no-retry --yes --disable containers
     description: Update system.
+  - command: atuin login
+    stdin: true
+    stdout: true
+    stderr: true
   - command: atuin sync
     description: Shell history sync.
