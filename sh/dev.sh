@@ -13,6 +13,7 @@ fish -c "vf addplugins auto_activation"
 cargo install difftastic cargo-update
 
 npm install -g dotenv-vault
+pnpm setup
 
 asdf reshim
 
