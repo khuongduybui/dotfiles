@@ -1,11 +1,15 @@
 function msi-init
     rich -a rounded -S blue --style blue -p "AWS SSO"
-    aws-sso-util login --all
+    aws-sso-util login --profile bear
+    aws-sso-util login --profile wolf
+    if hostname -f | grep -qv ds.mot.com
+        aws-sso-util login --profile amber
+    end
 
-    rich -a rounded -S blue --style blue -p "ScaleFt"
+    rich -a rounded -S blue --style blue -p ScaleFt
     sft login
 
-    if hostname | grep -q msi
+    if hostname -f | grep -q ds.mot.com
         rich -a rounded -S blue --style blue -p "MSI BitBucket"
         if test -e ~/iap.header; and test (jq -R 'split(".") | .[1] | @base64d | fromjson | .exp' <~/iap.header) -gt (now)
             set -l exp (math (jq -R 'split(".") | .[1] | @base64d | fromjson | .exp' <~/iap.header) - (now))
