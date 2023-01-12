@@ -9,8 +9,7 @@ rm -f ~/dotfiles/install
 cp dotbot/tools/git-submodule/install ~/dotfiles/install
 
 SHELL=bash ~/dotfiles/install --config-file prerequisites.conf.yaml
-test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" && \
-  mkdir -p ~/.config/fish/conf.d && echo "/home/linuxbrew/.linuxbrew/bin/brew shellenv | source; or true" > ~/.config/fish/conf.d/brew.fish
+test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 test -f ~/.asdf/asdf.sh && . ~/.asdf/asdf.sh
-
+sudo apt-get install -y unzip xdg-utils
 SHELL=bash ~/dotfiles/install --plugin-dir dotbot-asdf --plugin-dir dotbot-brew

@@ -13,6 +13,7 @@
     ~/.config/atuin/config.toml: .config/atuin/config.toml
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
     ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
+    ~/.config/fish/conf.d/brew.fish: .config/fish/conf.d/brew.fish
     ~/.config/fish/functions: .config/fish/functions
     ~/.config/starship.toml: .config/starship.toml
     ~/.config/direnv/direnv.toml: .config/direnv/direnv.toml
@@ -75,7 +76,6 @@
     - command: bash -l sh/chsh.sh fish
       description: Change user shell.
 
-
 - shell:
     - command: sh/asdf-preinstall.sh
       description: Install asdf.
@@ -110,27 +110,27 @@
       description: Clean up unused asdf versions.
 
 - shell:
-  - command: bash -l -c 'gh auth status 2>&1 | grep -qi "logged in" || gh auth login'
-    description: GitHub login.
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: sh/dev.sh
-    description: Install additional development tools.
-  - command: sh/aws.sh
-    description: Install additional aws tools.
-  - command: sh/shell-utils.sh
-    description: Install customer shell utils.
-  - command: sh/sft.sh
-    description: Install ScaleFt.
-  - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
-    description: Link WSL config.
-  - command: topgrade --no-retry --yes --disable containers
-    description: Update system.
-  - command: atuin login
-    description: Atuin login.
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: atuin sync
-    description: Shell history sync.
+    - command: bash -l -c 'gh auth status 2>&1 | grep -qi "logged in" || gh auth login'
+      description: GitHub login.
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: sh/dev.sh
+      description: Install additional development tools.
+    - command: sh/aws.sh
+      description: Install additional aws tools.
+    - command: sh/shell-utils.sh
+      description: Install customer shell utils.
+    - command: sh/sft.sh
+      description: Install ScaleFt.
+    - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
+      description: Link WSL config.
+    - command: topgrade --no-retry --yes --disable containers
+      description: Update system.
+    - command: atuin login
+      description: Atuin login.
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: atuin sync
+      description: Shell history sync.
