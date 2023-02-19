@@ -1,9 +1,9 @@
 function msi-init
     rich -a rounded -S blue --style blue -p "AWS SSO"
-    aws sso login --profile bear
-    aws sso login --profile wolf
+    aws-sso-util login --profile bear
+    aws-sso-util login --profile wolf
     if hostname -f | grep -qv ds.mot.com
-        aws sso login --profile amber
+        aws-sso-util login --profile amber
     end
 
     rich -a rounded -S blue --style blue -p ScaleFt
