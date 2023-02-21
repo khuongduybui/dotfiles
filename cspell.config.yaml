@@ -6,28 +6,43 @@ words:
   - ankitpokhrel
   - asciinema
   - atuin
+  - autosquash
   - awscli
   - awscurl
   - chsh
+  - creds
   - customfield
   - deno
   - devcontainer
+  - difft
+  - difftastic
+  - difftool
   - direnv
   - dotfiles
+  - duybui
+  - excludesfile
   - funced
   - gitsign
+  - gpgsign
   - httpie
   - markdownlint
+  - mergetool
   - nushell
   - passwordless
+  - pushdefault
   - Rhum
   - runtimes
   - SCRIPTDIR
   - signin
+  - signingkey
   - sigstore
   - subl
   - taplo
+  - textconv
   - topgrade
+  - unhide
+  - WCXT47
+  - worktree
   - wslpath
   - zoxide
 ignoreWords: []

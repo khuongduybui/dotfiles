@@ -102,5 +102,6 @@ connectorID = https://github.com/login/oauth
 
 [rebase]
 autosquash = true
+
 [fetch]
-	pruneTags = true
+pruneTags = true
