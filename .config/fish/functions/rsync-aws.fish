@@ -6,6 +6,9 @@ function rsync-aws
     test -d ~/winhome/OneDrive
     and bash ~/setup/backup-and-link.sh ~/winhome/OneDrive/Essentials/dotfile.aws ~/.aws
 
+    test -d ~/winhome/Insync/duy@buifamily.info/OneDrive
+    and bash ~/setup/backup-and-link.sh ~/winhome/Insync/duy@buifamily.info/OneDrive/Essentials/dotfile.aws ~/.aws
+
     test -f ~/.aws/config && chmod 644 ~/.aws/config
     test -f ~/.aws/credentials && chmod 644 ~/.aws/credentials
 

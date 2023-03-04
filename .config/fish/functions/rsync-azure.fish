@@ -6,6 +6,9 @@ function rsync-azure
     test -d ~/winhome/OneDrive
     and bash ~/setup/backup-and-link.sh ~/winhome/OneDrive/Essentials/dotfile.azure ~/.azure
 
+    test -d ~/winhome/Insync/duy@buifamily.info/OneDrive
+    and bash ~/setup/backup-and-link.sh ~/winhome/Insync/duy@buifamily.info/OneDrive/Essentials/dotfile.azure ~/.azure
+
     test -f ~/.azure/config && chmod 644 ~/.azure/config
     test -f ~/.azure/credentials && chmod 644 ~/.azure/credentials
 
