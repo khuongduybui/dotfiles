@@ -28,10 +28,12 @@ words:
   - markdownlint
   - mergetool
   - nushell
+  - oktapam
   - passwordless
   - pushdefault
   - Rhum
   - runtimes
+  - scaleft
   - SCRIPTDIR
   - signin
   - signingkey
