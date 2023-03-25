@@ -3,6 +3,9 @@ function rsync-aws
     test -d ~/OneDrive
     and bash ~/setup/backup-and-link.sh ~/OneDrive/Essentials/dotfile.aws ~/.aws
 
+    test -d ~/Insync/duy@buifamily.info/OneDrive
+    and bash ~/setup/backup-and-link.sh ~/Insync/duy@buifamily.info/OneDrive/Essentials/dotfile.aws ~/.aws
+
     test -d ~/winhome/OneDrive
     and bash ~/setup/backup-and-link.sh ~/winhome/OneDrive/Essentials/dotfile.aws ~/.aws
 

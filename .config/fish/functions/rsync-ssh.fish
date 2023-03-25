@@ -5,6 +5,9 @@ function rsync-ssh
     test -d ~/OneDrive
     and bash ~/setup/backup-and-link.sh ~/OneDrive/Essentials/dotfile.ssh ~/.ssh
 
+    test -d ~/Insync/duy@buifamily.info/OneDrive
+    and bash ~/setup/backup-and-link.sh ~/Insync/duy@buifamily.info/OneDrive/Essentials/dotfile.ssh ~/.ssh
+
     test -d ~/winhome/OneDrive
     and bash ~/setup/backup-and-link.sh ~/winhome/OneDrive/Essentials/dotfile.ssh ~/.ssh
 

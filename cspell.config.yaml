@@ -18,6 +18,7 @@ words:
   - difftastic
   - difftool
   - direnv
+  - dotfile
   - dotfiles
   - duybui
   - excludesfile
@@ -25,11 +26,13 @@ words:
   - gitsign
   - gpgsign
   - httpie
+  - Insync
   - markdownlint
   - mergetool
   - nushell
   - oktapam
   - passwordless
+  - preinstall
   - pushdefault
   - Rhum
   - runtimes
@@ -44,6 +47,8 @@ words:
   - topgrade
   - unhide
   - WCXT47
+  - wezterm
+  - winhome
   - worktree
   - wslpath
   - zoxide
