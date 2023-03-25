@@ -14,6 +14,8 @@ function browser-init
     if test -n "$BROWSER"
       echo "$BROWSER" | tee ~/.browser
       set -e BROWSER
+      set -eg BROWSER
+      set -eU BROWSER
       set -xU BROWSER (command cat ~/.browser)
     end
   end
