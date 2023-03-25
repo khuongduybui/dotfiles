@@ -62,9 +62,6 @@ if test -z $INIT
         end
     end
 
-    ## Preload WPS
-    wps-init
-
     ## Load byobu
     if status --is-login
         if test -z $BYOBU_WINDOW_NAME
