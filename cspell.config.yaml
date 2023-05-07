@@ -1,56 +1,11 @@
 version: '0.2'
 ignorePaths: []
-dictionaryDefinitions: []
-dictionaries: []
-words:
-  - ankitpokhrel
-  - asciinema
-  - atuin
-  - autosquash
-  - awscli
-  - awscurl
-  - chsh
-  - creds
-  - customfield
-  - deno
-  - devcontainer
-  - difft
-  - difftastic
-  - difftool
-  - direnv
-  - dotfile
-  - dotfiles
-  - duybui
-  - excludesfile
-  - funced
-  - gitsign
-  - gpgsign
-  - httpie
-  - Insync
-  - markdownlint
-  - mergetool
-  - nushell
-  - oktapam
-  - passwordless
-  - preinstall
-  - pushdefault
-  - Rhum
-  - runtimes
-  - scaleft
-  - SCRIPTDIR
-  - signin
-  - signingkey
-  - sigstore
-  - subl
-  - taplo
-  - textconv
-  - topgrade
-  - unhide
-  - WCXT47
-  - wezterm
-  - winhome
-  - worktree
-  - wslpath
-  - zoxide
+dictionaryDefinitions:
+  - name: custom-dictionary
+    path: ./.cspell/custom-dictionary.txt
+    addWords: true
+dictionaries:
+  - custom-dictionary
+words: []
 ignoreWords: []
 import: []

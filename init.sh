@@ -11,5 +11,6 @@ cp dotbot/tools/git-submodule/install ~/dotfiles/install
 bash -l -c '~/dotfiles/install --config-file prerequisites.conf.yaml'
 test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 test -f ~/.asdf/asdf.sh && . ~/.asdf/asdf.sh
-sudo apt-get install -y unzip xdg-utils wslu
+sudo apt-get install -y unzip xdg-utils
+grep -q -i "Microsoft" /proc/version && sudo apt-get install -y wslu || true
 bash -l -c '~/dotfiles/install --plugin-dir dotbot-asdf --plugin-dir dotbot-brew'
