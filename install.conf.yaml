@@ -78,7 +78,7 @@
       description: Change user shell.
 
 - shell:
-    - command: sh/asdf-preinstall.sh
+    - command: bash -l sh/asdf-preinstall.sh
       description: Install asdf.
 - asdf:
     - plugin: deno
@@ -107,7 +107,7 @@
       versions:
         - latest
 - shell:
-    - command: sh/asdf-cleanup.sh
+    - command: bash -l sh/asdf-cleanup.sh
       description: Clean up unused asdf versions.
 
 - shell:
@@ -116,17 +116,17 @@
       stdin: true
       stdout: true
       stderr: true
-    - command: sh/dev.sh
+    - command: bash -l sh/dev.sh
       description: Install additional development tools.
-    - command: sh/aws.sh
+    - command: bash -l sh/aws.sh
       description: Install additional aws tools.
-    - command: sh/shell-utils.sh
+    - command: bash -l sh/shell-utils.sh
       description: Install customer shell utils.
-    - command: sh/sft.sh
+    - command: bash -l sh/sft.sh
       description: Install ScaleFt.
     - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
-    - command: topgrade --no-retry --yes --disable containers
+    - command: topgrade --skip-notify --no-retry --yes --disable containers
       description: Update system.
     - command: atuin login
       description: Atuin login.
