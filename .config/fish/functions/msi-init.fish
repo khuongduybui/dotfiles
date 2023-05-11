@@ -24,7 +24,7 @@ function msi-init
     end
 
     rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
-    for pod in hawk wasp lion orca wolf bear
+    for pod in hawk wasp lion orca wolf bear seal op
         if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
             rich --style green -p "[bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is accessible"
         else
