@@ -126,7 +126,7 @@
       description: Install ScaleFt.
     - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
-    - command: topgrade --skip-notify --no-retry --yes --disable containers
+    - command: topgrade --skip-notify --no-retry --yes --disable containers snap
       description: Update system.
     - command: atuin login
       description: Atuin login.
