@@ -1,4 +1,5 @@
 # Custom Dictionary Words
+activeeye
 ankitpokhrel
 asciinema
 atuin
@@ -18,6 +19,7 @@ dotfile
 dotfiles
 duybui
 excludesfile
+fromjson
 funced
 gitsign
 gpgsign
@@ -34,6 +36,7 @@ Rhum
 runtimes
 scaleft
 SCRIPTDIR
+shellscripts
 signin
 signingkey
 sigstore
