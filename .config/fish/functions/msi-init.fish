@@ -16,7 +16,7 @@ function msi-init
             rich --style green -p "Session expires in $exp seconds."
         else
             rich --style blue -p "Invoking [bold italic]msi-bitbucket.sh[/bold italic]"
-            rich --style italic -p "From [blue]https://confluence.mot-solutions.com/display/REMOT/Bitbucket+Access+Flow[/blue] (last updated [bold]19-Aug-2022[/bold])."
+            rich --style italic -p "From [blue]https://confluence.mot-solutions.com/display/REMOT/Bitbucket+Access+Flow[/blue] (last updated [bold]03-Nov-2022[/bold])."
             rich --style italic -p "Saved to [blue]s3://duybui-msi-shellscripts/msi-bitbucket.sh[/blue] in [blue]sandbox duy[/blue] account."
             test -f ~/setup/msi-bitbucket.sh; or aws --profile=sandbox s3 cp s3://duybui-msi-shellscripts/msi-bitbucket.sh ~/setup/msi-bitbucket.sh
             test -f ~/setup/msi-bitbucket.sh; and bash ~/setup/msi-bitbucket.sh
@@ -24,7 +24,7 @@ function msi-init
     end
 
     rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
-    for pod in hawk wasp lion orca wolf bear seal op
+    for pod in op hawk wasp lion orca wolf bear seal
         if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
             rich --style green -p "[bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is accessible"
         else
