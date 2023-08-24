@@ -4,12 +4,12 @@ function browser-init
     info 'Searching for Browsers'
     if type -q wslview
       set -x BROWSER (which wslview)
-    else if type -q MicrosoftEdge.exe
-      set -x BROWSER (which MicrosoftEdge.exe)
     else if type -q microsoft-edge
       set -x BROWSER (which microsoft-edge)
     else if type -q microsoft-edge-dev
       set -x BROWSER (which microsoft-edge-dev)
+    else if type -q MicrosoftEdge.exe
+      set -x BROWSER (which MicrosoftEdge.exe)
     end
     if test -n "$BROWSER"
       echo "$BROWSER" | tee ~/.browser
