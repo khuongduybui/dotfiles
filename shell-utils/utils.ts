@@ -11,8 +11,7 @@ import {
 type os = "linux" | "darwin" | "windows";
 export const isWin = (os = Deno.build.os) => os === "windows";
 
-export const homeDirectoryEnv = (os?: os) =>
-  isWin(os) ? "USERPROFILE" : "HOME";
+export const homeDirectoryEnv = (os?: os) => isWin(os) ? "USERPROFILE" : "HOME";
 export const homeDirectory = (os?: os) =>
   Deno.env.get(homeDirectoryEnv(os)) ?? "/";
 
@@ -56,6 +55,16 @@ export const gitBranch = async (location = Deno.cwd()) => {
     })
   ).output.trim();
 };
+
+export const gitTags = async (location = Deno.cwd()) => {
+  return (
+    await exec("git tag --points-at HEAD", {
+      output: OutputMode.Capture,
+      cwd: location,
+    })
+  ).output.trim();
+};
+
 export const executable = async (command: string) => {
   const checkCommand = isWin()
     ? `cmd /C "where ${command}"`
@@ -99,10 +108,11 @@ export const invokeShell = (shell: string[], cmd: string[], options = {}) => {
 export const fuzzyShell = async (
   shell: string[],
   query: string,
-  cmd: string
+  cmd: string,
 ) => {
+  const fzfCommand = query ? `fzf -1 -q ${query}` : "fzf -1";
   const process = Deno.run({
-    cmd: [...shell, `${cmd} | fzf -1 -q ${query}`],
+    cmd: [...shell, `${cmd} | ${fzfCommand}`],
     stdout: "piped",
   });
   await process.status();

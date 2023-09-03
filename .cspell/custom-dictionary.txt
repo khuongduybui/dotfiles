@@ -27,6 +27,7 @@ httpie
 Insync
 markdownlint
 mergetool
+motorolasolutions
 nushell
 oktapam
 passwordless
