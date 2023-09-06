@@ -18,9 +18,9 @@ export async function main(tag: string | undefined, options: options) {
   const basicAuthString = `${options.username}:${options.password}`;
   const basicAuthToken = btoa(basicAuthString);
 
-  log.info(`Schedule a build with ${tag} and ${options.repo}`);
+  log.info(`Schedule a build with ${tag} in ${options.repo}-tags`);
   const response = await fetch(
-    `https://jenkins2.hawk.activeeye.com/job/${options.repo}-tags/buildWithParamaters`,
+    `https://jenkins2.hawk.activeeye.com/job/${options.repo}-tags/buildWithParameters`,
     {
       method: "POST",
       headers: {
