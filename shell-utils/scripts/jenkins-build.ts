@@ -1,7 +1,14 @@
 import * as log from "https://deno.land/std@0.129.0/log/mod.ts";
 
 import { cac } from "https://unpkg.com/cac@6.7.14/mod.ts";
-import { currentDirectory, fuzzy, gitTags, user } from "../utils.ts";
+import {
+  currentDirectory,
+  executable,
+  fuzzy,
+  gitTags,
+  invokeOutputs,
+  user,
+} from "../utils.ts";
 
 export async function main(tag: string | undefined, options: options) {
   if (!tag) {
@@ -36,17 +43,33 @@ export async function main(tag: string | undefined, options: options) {
   }
 }
 
+const getDefaultRepo = async () => {
+  if (await executable("gh")) {
+    return invokeOutputs([
+      "gh",
+      "repo",
+      "view",
+      "--json",
+      "name",
+      "--jq",
+      ".name",
+    ]);
+  }
+  return currentDirectory();
+};
+
 type options = { repo: string; username: string; password: string | undefined };
 const cli = cac((import.meta.url.split("/").pop() ?? "").replace(".ts", ""));
 cli.command("[tag]", "Schedule a tag build in Jenkins")
-  .option("--repo <repo>", "repo, default: current directory", {
-    default: currentDirectory(),
+  .option("--repo <repo>", "repo, default: current directory GitHub repo", {
+    default: await getDefaultRepo(),
   })
   .option(
     "--username <username>",
-    "Jenkins username, default: $(whoami)@motorolasolutions.com",
+    "Jenkins username, default: $JENKINS_USER environment variable, or $(whoami)@motorolasolutions.com",
     {
-      default: `${user()}@motorolasolutions.com`,
+      default: Deno.env.get("JENKINS_USER") ??
+        `${user()}@motorolasolutions.com`,
     },
   )
   .option(
