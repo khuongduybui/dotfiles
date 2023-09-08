@@ -6,7 +6,7 @@ import {
   executable,
   fuzzy,
   gitTags,
-  invokeOutputs,
+  invokeOutput,
   user,
 } from "../utils.ts";
 
@@ -45,7 +45,7 @@ export async function main(tag: string | undefined, options: options) {
 
 const getDefaultRepo = async () => {
   if (await executable("gh")) {
-    return invokeOutputs([
+    return invokeOutput([
       "gh",
       "repo",
       "view",
