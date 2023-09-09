@@ -24,8 +24,10 @@ funced
 gitsign
 gpgsign
 httpie
+imgcat
 Insync
 markdownlint
+mdcat
 mergetool
 motorolasolutions
 nushell

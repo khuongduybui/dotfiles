@@ -34,7 +34,7 @@
 - tap:
     - sigstore/tap
     - ankitpokhrel/jira-cli
-    - aws/tap
+    # - aws/tap
 
 - brew:
     - atuin
@@ -43,9 +43,11 @@
     - fish
     - fzf
     - fx
+    - imgcat
     - jq
-    - pass
+    - mdcat
     - nushell
+    - pass
     - rich-cli
     - starship
     - util-linux
