@@ -2,6 +2,7 @@ function msi-init
     rich -a rounded -S blue --style blue -p "AWS SSO"
     aws-sso-util login --profile bear
     aws-sso-util login --profile wolf
+    aws sso login --sso-session msi
     if hostname -f | grep -qv ds.mot.com
         aws-sso-util login --profile amber
     end
@@ -24,7 +25,7 @@ function msi-init
     end
 
     rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
-    for pod in op hawk wasp lion orca wolf bear seal
+    for pod in op hawk wasp lion orca wolf bear seal wren
         if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
             rich --style green -p "[bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is accessible"
         else
