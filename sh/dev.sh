@@ -6,6 +6,7 @@ mkdir -p /home/duybui/.virtualenvs
 pipx install --force virtualfish
 pipx install --force cfn-lint
 pipx install --force cfn-flip
+pipx install --force imgcat
 pipx ensurepath
 fish -c "vf install"
 fish -c "vf addplugins auto_activation"
