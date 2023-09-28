@@ -50,6 +50,16 @@ if test -z $INIT
             echo $EDITOR >~/.editor
         end
 
+        if not test -e ~/.visual
+            info 'Searching for Terminal Editors'
+            if type -q micro
+                set -x VISUAL (which micro)
+            end
+            set -xU MICRO_TRUECOLOR 1
+            set -xU VISUAL $VISUAL
+            echo $VISUAL >~/.visual
+        end
+
         browser-init
 
         ### Languages

@@ -54,3 +54,13 @@ winhome
 worktree
 wslpath
 zoxide
+monokai
+nvim
+truecolor
+cmdline
+varclear
+linuxbrew
+byobu
+autolaunch
+fish_preexec
+psub
