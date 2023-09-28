@@ -29,8 +29,8 @@ function msi-init
         if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
             rich --style green -p "[bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is accessible"
         else
-            rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/gateway[/bold italic]"
-            xdg-open "https://gateway1.$pod.activeeye.com/gateway"
+            rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
+            xdg-open "https://gateway1.$pod.activeeye.com/login"
         end
     end
 end
