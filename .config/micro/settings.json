@@ -1,7 +1,7 @@
 {
-  "autosu": true,
-  "colorcolumn": 160,
-  "diffgutter": true,
-  "mkparents": true,
-  "rmtrailingws": true
+    "autosu": true,
+    "colorcolumn": 160,
+    "diffgutter": true,
+    "mkparents": true,
+    "rmtrailingws": true
 }
