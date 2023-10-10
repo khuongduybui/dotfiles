@@ -26,11 +26,7 @@ function msi-init
 
     rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
     for pod in op hawk wasp lion orca wolf bear seal wren
-        if ssh -o ConnectTimeout=5 -q gateway1.ec2.$pod.activeeye.com exit
-            rich --style green -p "[bold italic]gateway1.ec2.$pod.activeeye.com[/bold italic] is accessible"
-        else
-            rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
-            xdg-open "https://gateway1.$pod.activeeye.com/login"
-        end
+        rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
+        xdg-open "https://gateway1.$pod.activeeye.com/gateway"
     end
 end
