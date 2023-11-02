@@ -18,6 +18,7 @@ export async function main(tag: string | undefined, options: options) {
   if (!tag) {
     throw new Error("No tag provided, found at HEAD, or chosen from the list");
   }
+  // @TODO: git show-ref --tags | grep -F "refs/tags/${tag}" to confirm the tag has been pushed
 
   if (!options.password) {
     throw new Error("No JENKINS_API environment variable found");
