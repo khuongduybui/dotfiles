@@ -28,7 +28,7 @@ export async function main(tag: string | undefined, options: options) {
 
   log.info(`Schedule a build with ${tag} in ${options.repo}-tags`);
   const response = await fetch(
-    `https://jenkins2.hawk.activeeye.com/job/${options.repo}-tags/buildWithParameters`,
+    `https://jenkins1.hawk.activeeye.com/job/${options.repo}-tags/buildWithParameters`,
     {
       method: "POST",
       headers: {
