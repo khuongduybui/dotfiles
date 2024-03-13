@@ -7,6 +7,8 @@ pipx install --force virtualfish
 pipx install --force cfn-lint
 pipx install --force cfn-flip
 pipx install --force imgcat
+pipx install --force frogmouth
+pipx install --force toolong
 pipx ensurepath
 fish -c "vf install"
 fish -c "vf addplugins auto_activation"
