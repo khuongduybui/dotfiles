@@ -14,6 +14,7 @@
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
     ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
     ~/.config/fish/conf.d/brew.fish: .config/fish/conf.d/brew.fish
+    ~/.config/fish/conf.d/warp.fish: .config/fish/conf.d/warp.fish
     ~/.config/fish/functions: .config/fish/functions
     ~/.config/starship.toml: .config/starship.toml
     ~/.config/micro/settings.json: .config/micro/settings.json
