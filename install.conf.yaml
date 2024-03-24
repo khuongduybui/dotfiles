@@ -36,6 +36,7 @@
 - tap:
     - sigstore/tap
     - ankitpokhrel/jira-cli
+    - common-fate/granted
     # - aws/tap
 
 - brew:
@@ -45,6 +46,7 @@
     - fish
     - fzf
     - fx
+    - granted
     - jq
     - mdcat
     - nushell
