@@ -1,7 +1,7 @@
 function msi-init
-    rich -a rounded -S blue --style blue -p "AWS SSO"
-    aws-sso-util login --profile bear
-    aws-sso-util login --profile wolf
+    # rich -a rounded -S blue --style blue -p "AWS SSO"
+    # aws-sso-util login --profile bear
+    # aws-sso-util login --profile wolf
     # aws sso login --sso-session msi
     # if hostname -f | grep -qv ds.mot.com
     #     aws-sso-util login --profile amber
