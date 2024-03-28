@@ -13,7 +13,7 @@ import {
 export async function main(tag: string | undefined, options: options) {
   if (!tag) {
     const tags = (await gitTags()).split("\n");
-    tag = await fuzzy(["fish", "-c"], "", tags);
+    tag = await fuzzy(["bash", "-c"], "", tags);
   }
   if (!tag) {
     throw new Error("No tag provided, found at HEAD, or chosen from the list");
