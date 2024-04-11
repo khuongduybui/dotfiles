@@ -49,7 +49,8 @@ abbr pid 'pnpm install --save-dev'
 abbr azrcc 'git clone git@ssh.dev.azure.com:v3/LunarlineProducts/'
 
 abbr ghcc 'gh repo clone'
-abbr drcc 'gh repo clone Delta-Risk-LLC/'
+abbr drcc 'gh repo clone msi-activeeye/'
+abbr bahcc 'gh repo clone Bijles-aan-Huis-B-V/'
 
 abbr awscc 'git clone codecommit://'
 abbr ssm 'aws ssm start-session --document-name AWS-StartInteractiveCommand --parameters command="bash -l" --target'
