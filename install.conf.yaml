@@ -119,11 +119,6 @@
       description: Clean up unused asdf versions.
 
 - shell:
-    - command: bash -l -c 'gh auth status 2>&1 | grep -qi "logged in" || gh auth login'
-      description: GitHub login.
-      stdin: true
-      stdout: true
-      stderr: true
     - command: bash -l sh/dev.sh
       description: Install additional development tools.
     - command: bash -l sh/aws.sh
@@ -136,10 +131,5 @@
       description: Link WSL config.
     - command: topgrade --skip-notify --no-retry --yes --disable containers snap
       description: Update system.
-    - command: atuin login
-      description: Atuin login.
-      stdin: true
-      stdout: true
-      stderr: true
-    - command: atuin sync
-      description: Shell history sync.
+    - command: echo "pass init duy@buifamily.info, gh auth login, atuin login, atuin sync"
+      description: Reminder for manual commands
