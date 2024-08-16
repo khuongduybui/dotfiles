@@ -30,6 +30,9 @@
 
     ~/.config/.jira/.config.yml: .config/.jira/.config.yml
 
+    ~/.aws/config: .aws/config
+    ~/.aws/cli/alias: .aws/cli/alias
+
 - create:
     - ~/code
 

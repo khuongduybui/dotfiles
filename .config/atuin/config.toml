@@ -1,3 +1,6 @@
 enter_accept = true
 show_preview = true
 max_preview_height = 10
+
+[dotfiles]
+enabled = true
