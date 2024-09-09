@@ -9,6 +9,7 @@
     ~/setup/backup-and-copy.sh: setup/backup-and-copy.sh
     ~/setup/backup-and-link.sh: setup/backup-and-link.sh
     ~/setup/vscode.sh: setup/vscode.sh
+    ~/setup/crow.sh: setup/crow.sh
 
     ~/.config/atuin/config.toml: .config/atuin/config.toml
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
