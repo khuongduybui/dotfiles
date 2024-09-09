@@ -1,14 +1,12 @@
 function msi-init
-    # rich -a rounded -S blue --style blue -p "AWS SSO"
-    # aws-sso-util login --profile bear
-    # aws-sso-util login --profile wolf
-    # aws sso login --sso-session msi
-    # if hostname -f | grep -qv ds.mot.com
-    #     aws-sso-util login --profile amber
-    # end
-
     rich -a rounded -S blue --style blue -p ScaleFt
     sft login
+
+    rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
+    for pod in op-test op hawk # wasp orca lion wolf bear seal wren
+        rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
+        xdg-open "https://gateway1.$pod.activeeye.com/gateway"
+    end
 
     if hostname -f | grep -q ds.mot.com
         rich -a rounded -S blue --style blue -p "MSI BitBucket"
@@ -22,11 +20,5 @@ function msi-init
             test -f ~/setup/msi-bitbucket.sh; or aws --profile=sandbox s3 cp s3://duybui-msi-shellscripts/msi-bitbucket.sh ~/setup/msi-bitbucket.sh
             test -f ~/setup/msi-bitbucket.sh; and bash ~/setup/msi-bitbucket.sh
         end
-    end
-
-    rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
-    for pod in op-test op hawk # wasp orca lion wolf bear seal wren
-        rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
-        xdg-open "https://gateway1.$pod.activeeye.com/gateway"
     end
 end
