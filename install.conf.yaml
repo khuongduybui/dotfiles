@@ -132,5 +132,5 @@
       description: Link WSL config.
     - command: topgrade --skip-notify --no-retry --yes --disable containers snap
       description: Update system.
-    - command: echo "pass init duy@buifamily.info, gh auth login, atuin login, atuin sync"
+    - command: echo "pass init duy@buifamily.info, gh auth login, atuin login, atuin sync, granted browser set"
       description: Reminder for manual commands

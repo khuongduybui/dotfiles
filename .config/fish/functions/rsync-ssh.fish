@@ -14,6 +14,9 @@ function rsync-ssh
     test -d ~/winhome/Insync/duy@buifamily.info/OneDrive
     and bash ~/setup/backup-and-link.sh ~/winhome/Insync/duy@buifamily.info/OneDrive/Essentials/dotfile.ssh ~/.ssh
 
+    test -d ~/winhome/.ssh
+    and bash ~/setup/backup-and-link.sh ~/winhome/.ssh ~/.ssh
+
     chmod 600 ~/.ssh/*.private.asc
     chmod 600 ~/.ssh/*.pem
     chmod 600 ~/.ssh/config
