@@ -2,12 +2,12 @@
 function myip
     info External IP
     type -q curl
-    and echo -n " "
-    and curl -s https://checkip.amazonaws.com | grep .
+    and curl -s https://checkip.amazonaws.com
 
     info Internal IP
     if type -q ip
-        ip address | grep inet | grep -oE "[ :]([0-9a-f]*[.:])+[%a-z0-9/]*[ \$]"
+        # ip address | grep inet | grep -oE "[ :]([0-9a-f]*[.:])+[%a-z0-9/]*[ \$]"
+        ip address | grep "inet " | cut -d' ' -f6 | cut -d'/' -f1
     else
         if __is_mac
             ifconfig | fgrep inet | grep -oE " ([0-9a-f]*[\.:]?)+[%a-z0-9]* "
