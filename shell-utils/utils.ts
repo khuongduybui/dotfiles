@@ -74,6 +74,7 @@ export const executable = async (command: string) => {
 
 export const editor = async (options = { wait: true }) => {
   if (await executable("code")) return ["code", "-r", options.wait ? "-w" : ""];
+  if (await executable("code-insiders")) return ["code-insiders", "-r", options.wait ? "-w" : ""];
   if (await executable("io.elementary.code")) return ["io.elementary.code"];
   if (await executable("subl")) return ["subl", options.wait ? "-w" : ""];
   if (await executable("micro")) return ["micro"];
