@@ -18,6 +18,7 @@ difft
 difftastic
 difftool
 direnv
+dotbot
 dotfile
 dotfiles
 duybui
@@ -40,6 +41,7 @@ nushell
 nvim
 oktapam
 passwordless
+pipx
 preinstall
 psub
 pushdefault
@@ -48,6 +50,7 @@ Rhum
 runtimes
 scaleft
 SCRIPTDIR
+shellenv
 shellscripts
 signin
 signingkey
@@ -64,4 +67,5 @@ wezterm
 winhome
 worktree
 wslpath
+wslu
 zoxide
