@@ -1,15 +1,12 @@
 #! /usr/bin/env sh
 
-pip install -U pip pipx
-asdf reshim
 mkdir -p /home/duybui/.virtualenvs
-pipx install --force virtualfish
-pipx install --force cfn-lint
-pipx install --force cfn-flip
-pipx install --force imgcat
-pipx install --force frogmouth
-pipx install --force toolong
-pipx ensurepath
+uv tool install --force virtualfish
+uv tool install --force cfn-lint
+uv tool install --force cfn-flip
+uv tool install --force imgcat
+uv tool install --force frogmouth
+uv tool install --force toolong
 fish -c "vf install"
 fish -c "vf addplugins auto_activation"
 

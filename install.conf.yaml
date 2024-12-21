@@ -61,6 +61,7 @@
     - yq
     - zoxide
     - topgrade
+    - uv
 
     - asciinema
     - bat
@@ -130,7 +131,7 @@
       description: Install ScaleFt.
     - command: ~/setup/backup-and-link.sh ~/dotfiles/etc/wsl.conf /etc/
       description: Link WSL config.
-    - command: topgrade --skip-notify --no-retry --yes --disable containers snap brew pipx
+    - command: topgrade --skip-notify --no-retry --yes --disable containers snap brew
       description: Update system.
     - command: echo "pass init duy@buifamily.info, gh auth login, atuin login, atuin sync, granted browser set, sft enroll --team activeeye"
       description: Reminder for manual commands
