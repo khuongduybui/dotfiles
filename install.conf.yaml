@@ -34,6 +34,8 @@
     ~/.aws/config: .aws/config
     ~/.aws/cli/alias: .aws/cli/alias
 
+    ~/bin/lightsail: bin/lightsail
+
 - create:
     - ~/code
 

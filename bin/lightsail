@@ -1,0 +1,31 @@
+#! /bin/bash
+
+set -eu -o pipefail
+
+instance=$1
+
+instance_details=$(aws lightsail get-instance-access-details --protocol ssh --instance-name "${instance}" | jq '.accessDetails')
+instance_host=$(jq -r '.ipAddress' <<<"${instance_details}")
+username=$(jq -r '.username' <<<"${instance_details}")
+
+work_dir=$(mktemp -d)
+# trunk-ignore(shellcheck/SC2064)
+trap "{ rm -rf ${work_dir}; }" EXIT
+
+kh_lines=$(jq -r --arg arg_host "${instance_host}" '.hostKeys[] | $arg_host+" "+.algorithm+" "+.publicKey' <<<"${instance_details}")
+while read -r kh_line; do
+  echo "${kh_line}" >>"${work_dir}/host_keys"
+done <<<"${kh_lines}"
+
+jq -r '.certKey' <<<"${instance_details}" >"${work_dir}/key-cert.pub"
+jq -r '.privateKey' <<<"${instance_details}" >"${work_dir}/key"
+chmod 600 "${work_dir}/key"
+
+shift
+ssh \
+  -o StrictHostKeyChecking=yes \
+  -o UserKnownHostsFile="${work_dir}/host_keys" \
+  -i" ${work_dir}/key" \
+  "${username}@${instance_host}"
+# trunk-ignore(shellcheck/SC2068)
+$@

@@ -35,12 +35,14 @@ linuxbrew
 markdownlint
 mdcat
 mergetool
+mktemp
 monokai
 motorolasolutions
 nushell
 nvim
 oktapam
 passwordless
+pipefail
 pipx
 preinstall
 psub
@@ -50,6 +52,7 @@ Rhum
 runtimes
 scaleft
 SCRIPTDIR
+shellcheck
 shellenv
 shellscripts
 signin
