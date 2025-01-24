@@ -32,6 +32,8 @@ httpie
 imgcat
 Insync
 linuxbrew
+lunarline
+mapi
 markdownlint
 mdcat
 mergetool
@@ -47,6 +49,7 @@ pipx
 preinstall
 psub
 pushdefault
+readwrite
 reshim
 Rhum
 runtimes
