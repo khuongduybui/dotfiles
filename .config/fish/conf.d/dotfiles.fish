@@ -12,7 +12,7 @@ if test -d ~/Android/Sdk
 else
     set -e ANDROID_HOME
 end
-test -f ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
+# test -f ~/.asdf/asdf.fish; and source ~/.asdf/asdf.fish
 varclear PATH
 set -xU PATH $PATH
 
@@ -37,8 +37,8 @@ if test -z $INIT
         ### Editors
         if not test -e ~/.editor
             info 'Searching for Editors'
-            if test -e ~/.asdf/shims/edit
-                set -x EDITOR ~/.asdf/shims/edit
+            if test -e ~/.deno/bin/edit
+                set -x EDITOR ~/.deno/bin/edit
             else if type -q code
                 and not test -e ~/.disable-vscode
                 set -x EDITOR ~/setup/vscode.sh
