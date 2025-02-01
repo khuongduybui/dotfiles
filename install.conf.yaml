@@ -29,8 +29,6 @@
     ~/.config/git/attributes: .config/git/attributes
     ~/.config/gh/config.yml: .config/gh/config.yml
 
-    ~/.config/.jira/.config.yml: .config/.jira/.config.yml
-
     ~/.aws/config: .aws/config
     ~/.aws/cli/alias: .aws/cli/alias
 
@@ -41,9 +39,7 @@
 
 - tap:
     - sigstore/tap
-    - ankitpokhrel/jira-cli
     - common-fate/granted
-    # - aws/tap
 
 - brew:
     - atuin
@@ -63,7 +59,6 @@
     - yq
     - zoxide
     - topgrade
-    - uv
 
     - asciinema
     - bat
@@ -72,7 +67,6 @@
     - git-delta
     - gitsign
     - httpie
-    - jira-cli
     - micro
     - zip
 
@@ -83,44 +77,12 @@
     - cfn-flip
     - git-remote-codecommit
 
-- shell:
-    - command: bash -l -c "brew upgrade"
-      description: Update tools.
-    - command: bash -l sh/chsh.sh fish
-      description: Change user shell.
+    - uv
+    - deno
 
 - shell:
-    - command: bash -l sh/asdf-preinstall.sh
-      description: Install asdf.
-- asdf:
-    - plugin: deno
-      url: https://github.com/asdf-community/asdf-deno.git
-      global: latest
-      versions:
-        - latest
-    - plugin: golang
-      url: https://github.com/kennyp/asdf-golang.git
-      global: latest
-      versions:
-        - latest
-    - plugin: nodejs
-      url: https://github.com/asdf-vm/asdf-nodejs.git
-      global: latest
-      versions:
-        - latest
-    - plugin: python
-      url: https://github.com/danhper/asdf-python.git
-      global: latest
-      versions:
-        - latest
-    - plugin: rust
-      url: https://github.com/code-lever/asdf-rust.git
-      global: latest
-      versions:
-        - latest
-- shell:
-    - command: bash -l sh/asdf-cleanup.sh
-      description: Clean up unused asdf versions.
+    - command: bash -l sh/chsh.sh fish
+      description: Change user shell.
 
 - shell:
     - command: bash -l sh/dev.sh
