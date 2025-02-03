@@ -66,6 +66,7 @@
     - gh
     - git-delta
     - gitsign
+    - difftastic
     - httpie
     - micro
     - zip
