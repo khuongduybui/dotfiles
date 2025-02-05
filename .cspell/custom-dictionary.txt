@@ -23,6 +23,7 @@ dotfile
 dotfiles
 duybui
 excludesfile
+FAPI
 fish_preexec
 fromjson
 funced

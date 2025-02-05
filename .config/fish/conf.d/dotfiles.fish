@@ -87,6 +87,7 @@ if test -z $INIT
 end
 
 ### Shell
+if status --is-interactive
 type -q starship; and source (starship init fish --print-full-init | psub); and enable_transience
 
 type -q direnv; and direnv hook fish | source
@@ -99,6 +100,7 @@ type -q atuin; and atuin init fish | source; and atuin gen-completions --shell f
 
 string match -q "$TERM_PROGRAM" vscode
 and test -x code
-and test -e (code --locate-shell-integration-path fish | sed -e 's/-fish//')
-and . (code --locate-shell-integration-path fish | sed -e 's/-fish//')
+and test -e (code --locate-shell-integration-path fish)
+and . (code --locate-shell-integration-path fish)
 or true
+end

@@ -2,5 +2,17 @@ enter_accept = true
 show_preview = true
 max_preview_height = 10
 
+history_filter = [
+  ".vscode-remote/extensions",
+
+  "^set TOKEN",
+  "^set FAPI_ENDPOINT",
+  "^set FAPI_VERSION",
+  "^set ESN",
+  "^set LSN",
+
+  "execute_changeset.py",
+]
+
 [dotfiles]
 enabled = true
