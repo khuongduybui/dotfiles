@@ -14,6 +14,7 @@
     ~/.config/atuin/config.toml: .config/atuin/config.toml
     ~/.config/fish/conf.d/dotfiles.fish: .config/fish/conf.d/dotfiles.fish
     ~/.config/fish/conf.d/abbreviations.fish: .config/fish/conf.d/abbreviations.fish
+    ~/.config/fish/conf.d/assume.fish: .config/fish/conf.d/assume.fish
     ~/.config/fish/conf.d/brew.fish: .config/fish/conf.d/brew.fish
     # ~/.config/fish/conf.d/warp.fish: .config/fish/conf.d/warp.fish
     ~/.config/fish/functions: .config/fish/functions
