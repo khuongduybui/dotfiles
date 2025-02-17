@@ -7,11 +7,11 @@ autolaunch
 autosquash
 awscli
 awscurl
-btop
 byobu
 chsh
 cmdline
 creds
+ctop
 customfield
 deno
 devcontainer
