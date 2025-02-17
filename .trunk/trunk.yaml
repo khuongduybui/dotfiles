@@ -1,10 +1,11 @@
 version: 0.1
 runtimes:
   enabled:
-    - go@1.18.3
-    - node@16.14.2
+    - python@3.10.8
+    - go@1.19.5
+    - node@18.12.1
 cli:
-  version: 1.9.1
+  version: 1.22.10
 lint:
   definitions:
     - name: deno-ts
@@ -18,14 +19,15 @@ lint:
           success_codes:
             - 0
   enabled:
-    - cspell@6.31.1
+    - yamllint@1.35.1
+    - cspell@8.17.3
     - git-diff-check
-    - gitleaks@8.16.3
-    - markdownlint@0.34.0
-    - prettier@2.8.8
-    - shellcheck@0.9.0
-    - shfmt@3.5.0
-    - taplo@0.8.0
+    - gitleaks@8.23.3
+    - markdownlint@0.44.0
+    - prettier@3.5.1
+    - shellcheck@0.10.0
+    - shfmt@3.6.0
+    - taplo@0.9.3
     - deno-ts
   ignore:
     - linters: [prettier]
@@ -40,5 +42,5 @@ actions:
 plugins:
   sources:
     - id: trunk
-      ref: v0.0.14
+      ref: v1.2.1
       uri: https://github.com/trunk-io/plugins
