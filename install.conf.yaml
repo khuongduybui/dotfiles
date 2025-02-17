@@ -44,6 +44,7 @@
 
 - brew:
     - atuin
+    - btop
     - direnv
     - fd
     - fish
@@ -62,6 +63,7 @@
     - topgrade
 
     - asciinema
+    - btop
     - bat
     - eza
     - gh
