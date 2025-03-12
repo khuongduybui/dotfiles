@@ -19,14 +19,14 @@ lint:
           success_codes:
             - 0
   enabled:
-    - checkov@3.2.377
-    - trufflehog@3.88.13
-    - yamllint@1.35.1
+    - checkov@3.2.382
+    - trufflehog@3.88.16
+    - yamllint@1.36.0
     - cspell@8.17.5
     - git-diff-check
     - gitleaks@8.24.0
     - markdownlint@0.44.0
-    - prettier@3.5.2
+    - prettier@3.5.3
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - taplo@0.9.3
