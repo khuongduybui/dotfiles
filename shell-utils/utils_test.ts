@@ -17,7 +17,7 @@ Rhum.testPlan("utils", () => {
     Rhum.testCase("returns USERPROFILE if os is windows", () => {
       Rhum.asserts.assertEquals(
         utils.homeDirectoryEnv("windows"),
-        "USERPROFILE"
+        "USERPROFILE",
       );
     });
     Rhum.testCase("returns HOME otherwise", () => {

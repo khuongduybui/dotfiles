@@ -15,12 +15,12 @@ data.forEach(async (mem: mem) => {
     "Documents",
     "Appledore",
     "mem.ai",
-    `${mem.id}.md`
+    `${mem.id}.md`,
   );
   await Deno.writeTextFile(
     outputPath,
     `# ${mem.title}
 --------
-  ${mem.markdown}`
+  ${mem.markdown}`,
   );
 });
