@@ -8,5 +8,6 @@ prompt: enabled
 pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
-    co: pr checkout
+  co: pr checkout
+  merge: pr merge --delete-branch --squash
 version: '1'
