@@ -5,7 +5,7 @@ runtimes:
     - go@1.21.0
     - node@18.20.5
 cli:
-  version: 1.22.11
+  version: 1.22.12
 lint:
   definitions:
     - name: deno-ts
@@ -19,12 +19,12 @@ lint:
           success_codes:
             - 0
   enabled:
-    - checkov@3.2.390
-    - trufflehog@3.88.18
-    - yamllint@1.36.2
-    - cspell@8.17.5
+    - checkov@3.2.408
+    - trufflehog@3.88.25
+    - yamllint@1.37.0
+    - cspell@8.19.2
     - git-diff-check
-    - gitleaks@8.24.0
+    - gitleaks@8.24.3
     - markdownlint@0.44.0
     - prettier@3.5.3
     - shellcheck@0.10.0
@@ -44,5 +44,5 @@ actions:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.7
+      ref: v1.6.8
       uri: https://github.com/trunk-io/plugins
