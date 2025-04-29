@@ -7,22 +7,12 @@ runtimes:
 cli:
   version: 1.22.12
 lint:
-  definitions:
-    - name: deno-ts
-      files:
-        - typescript
-      commands:
-        - run: deno fmt -
-          output: rewrite
-          stdin: true
-          formatter: true
-          success_codes:
-            - 0
   enabled:
-    - checkov@3.2.408
+    - deno@2.2.12
+    - checkov@3.2.412
     - trufflehog@3.88.25
     - yamllint@1.37.0
-    - cspell@8.19.2
+    - cspell@8.19.3
     - git-diff-check
     - gitleaks@8.24.3
     - markdownlint@0.44.0
@@ -30,7 +20,6 @@ lint:
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - taplo@0.9.3
-    - deno-ts
   ignore:
     - linters: [prettier]
       paths:
