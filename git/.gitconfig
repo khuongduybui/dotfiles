@@ -82,11 +82,11 @@ helper = !gh auth git-credential
 helper = store
 username = WCXT47
 
-[commit]
-gpgsign = true
+# [commit]
+# gpgsign = true
 
-[tag]
-gpgsign = true
+# [tag]
+# gpgsign = true
 
 [gpg]
 format = x509
