@@ -46,10 +46,8 @@
     - atuin
     - bottom
     - ctop
-    - direnv
     - fd
     - fish
-    - fzf
     - fx
     - granted
     - jq
@@ -59,7 +57,6 @@
     - rich-cli
     - starship
     - util-linux
-    - yq
     - zoxide
     - topgrade
 
@@ -67,12 +64,9 @@
     - btop
     - bat
     - eza
-    - gh
     - git-delta
-    - gitsign
     - difftastic
     - httpie
-    - micro
     - zip
 
     - awscli

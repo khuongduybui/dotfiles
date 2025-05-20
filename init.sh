@@ -17,5 +17,7 @@ test -f ~/.asdf/asdf.sh && . ~/.asdf/asdf.sh
 sudo apt-get install -y unzip xdg-utils
 # trunk-ignore(shellcheck/SC2015)
 grep -q -i "Microsoft" /proc/version && sudo apt-get install -y wslu || true
+sudo apt-get install -y direnv fzf yq gh micro
 # trunk-ignore(shellcheck/SC2088)
 SHELL=bash bash -l -c '~/dotfiles/install --plugin-dir dotbot-asdf --plugin-dir dotbot-brew'
+echo "missing gitsign"
