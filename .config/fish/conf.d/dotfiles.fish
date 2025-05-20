@@ -72,16 +72,6 @@ if test -z $INIT
         end
     end
 
-    ## Load byobu
-    if status --is-login
-        if test -z $BYOBU_WINDOW_NAME
-            and not test -e ~/.byobu/disable-autolaunch
-            and type -q byobu-launcher
-            info 'Launching Byobu'
-            exec byobu-launcher
-        end
-    end
-
     ## Done INIT
     set -x INIT true
 end
