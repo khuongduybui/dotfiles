@@ -22,6 +22,7 @@
     ~/.config/micro/settings.json: .config/micro/settings.json
     ~/.config/direnv/direnv.toml: .config/direnv/direnv.toml
     ~/.config/wezterm/wezterm.lua: .config/wezterm/wezterm.lua
+    ~/.config/topgrade.d/dotfiles.toml: .config/topgrade.d/dotfiles.toml
 
     ~/.editorconfig: .editorconfig
     ~/.prettierrc.yaml: .prettierrc.yaml
