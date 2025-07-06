@@ -1,2 +1,3 @@
-[misc]
+assume_yes = true
 disable = ["jetbrains_gateway"]
+no_retry = true
