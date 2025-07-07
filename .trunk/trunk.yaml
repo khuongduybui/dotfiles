@@ -3,20 +3,20 @@ runtimes:
   enabled:
     - python@3.10.8
     - go@1.21.0
-    - node@18.20.5
+    - node@22.16.0
 cli:
-  version: 1.22.12
+  version: 1.24.0
 lint:
   enabled:
-    - deno@2.2.12
-    - checkov@3.2.412
-    - trufflehog@3.88.25
-    - yamllint@1.37.0
-    - cspell@8.19.3
+    - deno@2.4.0
+    - checkov@3.2.447
+    - trufflehog@3.89.2
+    - yamllint@1.37.1
+    - cspell@9.0.2
     - git-diff-check
-    - gitleaks@8.24.3
-    - markdownlint@0.44.0
-    - prettier@3.5.3
+    - gitleaks@8.27.2
+    - markdownlint@0.45.0
+    - prettier@3.6.2
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - taplo@0.9.3
@@ -33,5 +33,5 @@ actions:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.8
+      ref: v1.7.1
       uri: https://github.com/trunk-io/plugins
