@@ -3,7 +3,7 @@ function msi-init
     sft login
 
     rich -a rounded -S blue --style blue -p "ActiveEye Gateway"
-    for pod in op-test op hawk # wasp orca lion wolf bear seal wren
+    for pod in op # op-test hawk wasp orca lion wolf bear seal wren
         rich --style blue -p "Invoking [bold italic]https://gateway1.$pod.activeeye.com/login[/bold italic]"
         xdg-open "https://gateway1.$pod.activeeye.com/gateway"
     end
