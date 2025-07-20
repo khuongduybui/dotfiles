@@ -8,9 +8,9 @@ cli:
   version: 1.24.0
 lint:
   enabled:
-    - deno@2.4.0
-    - checkov@3.2.447
-    - trufflehog@3.89.2
+    - deno@2.4.2
+    - checkov@3.2.451
+    - trufflehog@3.90.0
     - yamllint@1.37.1
     - cspell@9.0.2
     - git-diff-check
